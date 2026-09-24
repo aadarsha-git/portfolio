@@ -1,7 +1,7 @@
 :root {
   --bg: #000;
   --panel: #121212;
-  --accent: #ffab33;
+  --accent: #fda101;
   --text: #f4f4f4;
   --muted: #b9b9b9
 }
@@ -78,7 +78,7 @@ h2 {
   left: -180px;
   top: -180px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 171, 51, .14), transparent 65%);
+  background: radial-gradient(circle, rgba(253, 161, 1, .14), transparent 65%);
   pointer-events: none;
   z-index: 1;
   will-change: transform
@@ -154,22 +154,24 @@ nav a:hover::after {
   justify-content: center;
   gap: 18px;
   transform: rotate(-9deg);
-  opacity: .5
+  opacity: .75
 }
 
 .krow {
   display: flex;
-  gap: 18px;
   width: max-content;
   will-change: transform
 }
 
 .krow img {
-  width: 280px;
-  height: 170px;
-  object-fit: cover;
+  height: var(--rh, 220px);
+  width: auto;
+  aspect-ratio: auto 1/1;
+  flex: none;
+  margin-right: 18px;
   border-radius: 18px;
-  background: #222
+  background: #222;
+  filter: blur(var(--blur, 7px))
 }
 
 .hero::after {
@@ -244,7 +246,7 @@ nav a:hover::after {
 }
 
 .btn:hover {
-  box-shadow: 0 8px 30px rgba(255, 171, 51, .35)
+  box-shadow: 0 8px 30px rgba(253, 161, 1, .35)
 }
 
 .btn.ghost {
@@ -295,27 +297,26 @@ section {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 18px;
+  columns: 4 200px;
+  column-gap: 18px;
   max-width: 1100px;
   margin: auto
 }
 
 .card {
-  aspect-ratio: 16/9;
+  break-inside: avoid;
+  margin-bottom: 18px;
   border-radius: 20px;
   overflow: hidden;
   background: var(--panel);
   transition: transform .2s ease-out;
-  transform-style: preserve-3d;
   cursor: pointer
 }
 
 .card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: auto 4/5;
   transition: transform .6s
 }
 
@@ -375,16 +376,23 @@ section {
 
 .tcard:hover {
   transform: translateY(-8px);
-  border-color: rgba(255, 171, 51, .4)
+  border-color: rgba(253, 161, 1, .4)
 }
 
 .tcard img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 18px;
-  background: #333
+  width: 130px;
+  height: 130px;
+  border-radius: 28px;
+  object-fit: contain;
+  padding: 8px;
+  margin: 0 auto 20px;
+  background: #fff;
+  cursor: zoom-in;
+  transition: transform .3s
+}
+
+.tcard img:hover {
+  transform: scale(1.06)
 }
 
 .tcard p {
@@ -450,6 +458,30 @@ footer {
   padding: 60px 5vw 40px;
   font-size: .9rem;
   color: var(--muted)
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px
+}
+
+.socials a {
+  padding: .55rem 1.3rem;
+  border: 1px solid #333;
+  border-radius: 999px;
+  color: var(--text);
+  font: 600 .88rem Poppins, sans-serif;
+  transition: background .25s, color .25s, transform .25s, border-color .25s
+}
+
+.socials a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #111;
+  transform: translateY(-4px)
 }
 
 .tviewport {
@@ -613,11 +645,6 @@ footer {
   .about-row h2 {
     text-align: center
   }
-
-  .krow img {
-    width: 200px;
-    height: 120px
-  }
 }
 
 @media(prefers-reduced-motion:reduce) {
@@ -633,4 +660,64 @@ footer {
     opacity: 1;
     transform: none
   }
+}
+
+@media(max-width:600px) {
+  .grid {
+    columns: 2;
+    column-gap: 12px
+  }
+
+  .card {
+    margin-bottom: 12px;
+    border-radius: 14px
+  }
+}
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, .85);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s
+}
+
+#lightbox.open {
+  opacity: 1;
+  pointer-events: auto
+}
+
+#lightbox img {
+  border-radius: 16px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, .6);
+  transform: scale(.92);
+  transition: transform .4s cubic-bezier(.2, .8, .2, 1)
+}
+
+#lightbox.open img {
+  transform: none
+}
+
+#lbclose {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--accent);
+  color: #111;
+  font: 700 1.6rem/1 Poppins, sans-serif;
+  cursor: pointer;
+  transition: transform .2s
+}
+
+#lbclose:hover {
+  transform: rotate(90deg)
 }

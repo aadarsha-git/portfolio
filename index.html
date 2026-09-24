@@ -1,99 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aadarsha Khanal | Graphic Designer</title>
-<meta name="description" content="Portfolio of Aadarsha Khanal, a graphic designer based in Nepal.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aadarsha Khanal | Graphic Designer</title>
+  <meta name="description" content="Portfolio of Aadarsha Khanal, a graphic designer based in Nepal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800&family=Raleway:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div id="progress"></div>
-<div id="glow"></div>
+  <div id="progress"></div>
+  <div id="glow"></div>
 
-<header id="nav">
-  <a href="#home" class="logo"><img src="aadarsha new logo.png" alt="AK"></a>
-  <nav>
-    <a href="#home">Home</a><a href="#featured">My Work</a><a href="#about">About Me</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact Me</a>
-  </nav>
-</header>
+  <header id="nav">
+    <a href="#home" class="logo"><img src="aadarsha new logo.png" alt="AK"></a>
+    <nav>
+      <a href="#home">Home</a><a href="#featured">My Work</a><a href="#about">About Me</a><a
+        href="#testimonials">Testimonials</a><a href="#contact">Contact Me</a>
+    </nav>
+  </header>
 
-<section id="home" class="hero">
-  <div class="kinetic" id="kinetic" aria-hidden="true"></div>
-  <div class="hero-content">
-    <h1 id="headline">Creating Magic for Creators.</h1>
-    <p class="sub">I help you grab your audience's attention towards your content.</p>
-    <div class="btns">
-      <a class="btn magnet" href="#featured">My Works</a>
-      <a class="btn ghost magnet" href="#contact">Hire Me</a>
+  <section id="home" class="hero">
+    <div class="kinetic" id="kinetic" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1 id="headline">Creating Magic for Creators.</h1>
+      <p class="sub">I help you grab your audience's attention towards your content.</p>
+      <div class="btns">
+        <a class="btn magnet" href="#featured">My Works</a>
+        <a class="btn ghost magnet" href="#contact">Hire Me</a>
+      </div>
     </div>
+  </section>
+
+  <div class="clients" aria-hidden="true">
+    <div class="track" id="clients"></div>
   </div>
-</section>
 
-<div class="clients" aria-hidden="true"><div class="track" id="clients"></div></div>
+  <section id="featured">
+    <h2 class="reveal">Featured Designs.</h2>
+    <p class="lead reveal">I combine design and strategy to exceed your expectations.<br>Explore my featured work below.
+    </p>
+    <div class="grid" id="grid"></div>
+  </section>
 
-<section id="featured">
-  <h2 class="reveal">Featured Designs.</h2>
-  <p class="lead reveal">I combine design and strategy to exceed your expectations.<br>Explore my featured work below.</p>
-  <div class="grid" id="grid"></div>
-</section>
-
-<section id="about">
-  <div class="about-row reveal">
-    <div>
-      <h2>Who am I?</h2>
-      <p>Hello, I'm Aadarsha Khanal, a graphic designer from Nepal with two years of industry experience. I design thumbnails, posters and social media graphics that make people stop scrolling and pay attention to your content.</p>
+  <section id="about">
+    <div class="about-row reveal">
+      <div>
+        <h2>Who am I?</h2>
+        <p>Hello, I'm Aadarsha Khanal, a graphic designer from Nepal with two years of industry experience. I design
+          thumbnails, posters and social media graphics that make people stop scrolling and pay attention to your
+          content.</p>
+      </div>
+      <img class="avatar" id="about1" alt="Aadarsha Khanal">
     </div>
-    <img class="avatar" id="about1" alt="Aadarsha Khanal">
-  </div>
-  <div class="about-row flip reveal">
-    <img class="avatar" id="about2" alt="Aadarsha at work">
-    <div>
-      <h2>Why me?</h2>
-      <p>If you only need someone to place text on a picture, I'm not the right fit. If you want a designer who thinks about your audience and designs to earn the click, let's work together.</p>
+    <div class="about-row flip reveal">
+      <img class="avatar" id="about2" alt="Aadarsha at work">
+      <div>
+        <h2>Why me?</h2>
+        <p>If you only need someone to place text on a picture, I'm not the right fit. If you want a designer who thinks
+          about your audience and designs to earn the click, let's work together.</p>
+      </div>
     </div>
+  </section>
+
+  <section id="testimonials">
+    <h2 class="reveal">Written Testimonials.</h2>
+    <div class="tviewport" id="tview">
+      <div class="ttrack" id="ttrack"></div>
+    </div>
+    <div class="tdots" id="tdots"></div>
+  </section>
+
+  <section id="contact">
+    <h2 class="reveal">Want to hire me?</h2>
+    <form id="form" class="reveal" novalidate>
+      <label>Your name *<input name="name" required></label>
+      <label>WhatsApp number *<input name="phone" type="tel" required></label>
+      <label>Your channel or brand name<input name="brand"></label>
+      <label>What do you want? *
+        <select name="service" required>
+          <option value="">Select a choice</option>
+          <option>Thumbnail design</option>
+          <option>Logo and branding</option>
+          <option>Social media posts</option>
+          <option>Poster or banner</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label>Message for me<textarea name="msg" rows="4"></textarea></label>
+      <p id="err" role="alert"></p>
+      <button class="btn magnet" type="submit">Send on WhatsApp</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="socials">
+      <a href="https://www.facebook.com/aadarsha.khanal.2025" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/aadarsha001/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://x.com/Aadarsha0011" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.behance.net/gallery/256100891/DESIGNS" target="_blank" rel="noopener">Behance</a>
+      <a href="https://wa.me/9779749366229" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p>&copy; <span id="yr"></span> Aadarsha Khanal. All rights reserved.</p>
+  </footer>
+
+  <div id="veil"></div>
+  <div id="welcome" role="dialog" aria-label="Welcome">
+    <button id="wclose" aria-label="Close welcome">&times;</button>
+    <!-- <span class="bubble">Namaste! Welcome to my portfolio.</span> -->
+    <img id="wimg" alt="Namaste">
   </div>
-</section>
 
-<section id="testimonials">
-  <h2 class="reveal">Written Testimonials.</h2>
-  <div class="tviewport" id="tview"><div class="ttrack" id="ttrack"></div></div>
-  <div class="tdots" id="tdots"></div>
-</section>
-
-<section id="contact">
-  <h2 class="reveal">Want to hire me?</h2>
-  <form id="form" class="reveal" novalidate>
-    <label>Your name *<input name="name" required></label>
-    <label>WhatsApp number *<input name="phone" type="tel" required></label>
-    <label>Your channel or brand name<input name="brand"></label>
-    <label>What do you want? *
-      <select name="service" required>
-        <option value="">Select a choice</option>
-        <option>Thumbnail design</option>
-        <option>Logo and branding</option>
-        <option>Social media posts</option>
-        <option>Poster or banner</option>
-        <option>Something else</option>
-      </select>
-    </label>
-    <label>Message for me<textarea name="msg" rows="4"></textarea></label>
-    <p id="err" role="alert"></p>
-    <button class="btn magnet" type="submit">Send on WhatsApp</button>
-  </form>
-</section>
-
-<footer>&copy; <span id="yr"></span> Aadarsha Khanal. All rights reserved.</footer>
-
-<div id="veil"></div>
-<div id="welcome" role="dialog" aria-label="Welcome">
-  <button id="wclose" aria-label="Close welcome">&times;</button>
-  <img id="wimg" alt="Namaste">
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
