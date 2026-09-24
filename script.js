@@ -26,11 +26,11 @@ const CONFIG = {
   featured: [
     "semi final.png",
     "thank u messi.png",
-    "CHECKMATE.PNG",
+    "checkmate.png",
     "LINE sagarmatha aaja.png",
     "the boys 2.png",
     "sher mallah.png",
-    "AADARSHA 03.PNG",
+    "AADARSHA 03.png",
     "jora.png",
     "game day nor vs eng.png",
     "STAR BOY 1.png",
