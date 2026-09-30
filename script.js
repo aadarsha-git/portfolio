@@ -4,7 +4,7 @@ const CONFIG = {
   //folders
   folders: { hero: "heroimages/", clients: "clients/", featured: "featured/", about: "about-me/", testimonials: "testimonials/", welcome: "" },
   welcome: "namskar.png",
-  about: ["aadarsha flower.png", "kya hal hae.png"],
+  about: ["aadarsha flower.webp", "kya hal hae.webp"],
 
   heroImages: [
     "thank u.png",
