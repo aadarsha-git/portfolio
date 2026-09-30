@@ -3,7 +3,7 @@ const CONFIG = {
   whatsapp: "9779749366229",
   //folders
   folders: { hero: "heroimages/", clients: "clients/", featured: "featured/", about: "about-me/", testimonials: "testimonials/", welcome: "" },
-  welcome: "namskar.png",
+  welcome: "namskar.webp",
   about: ["aadarsha flower.webp", "kya hal hae.webp"],
 
   heroImages: [
