@@ -21,7 +21,8 @@ const CONFIG = {
     "c4.png",
     "c5.png",
     "c6.png",
-    "c7.png"
+    "c7.png",
+    "c8.png"
   ],
   featured: [
     "semi final.png",
